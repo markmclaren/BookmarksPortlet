@@ -29,6 +29,14 @@
         <system>${jasig-issues-system}</system>
     </issueManagement>
 
+    <repositories>
+        <!-- required for javax.script:groovy-engine:1.1(1.1-jdk14) -->
+        <repository>
+            <id>Mulesoft Repository</id>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+        </repository>
+    </repositories>    
+
     <properties>
         <spring.version>3.2.18.RELEASE</spring.version>
         <uportal-libs.version>5.11.0</uportal-libs.version>
