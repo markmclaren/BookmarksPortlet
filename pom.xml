@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jasig.parent</groupId>
         <artifactId>jasig-parent</artifactId>
-        <version>39</version>
+        <version>41</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -21,7 +21,7 @@
         <connection>scm:git:git://github.com/Jasig/BookmarksPortlet.git</connection>
         <developerConnection>scm:git:git@github.com:Jasig/BookmarksPortlet.git</developerConnection>
         <url>https://github.com/Jasig/BookmarksPortlet</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
@@ -35,7 +35,12 @@
             <id>Mulesoft Repository</id>
             <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
         </repository>
-    </repositories>    
+        <!-- required for javax.script:script-api:1.0 transient dep -->
+        <repository>
+            <id>servicemix</id>
+            <url>https://svn.apache.org/repos/asf/servicemix/m2-repo/</url>
+        </repository>
+    </repositories>
 
     <properties>
         <spring.version>3.2.18.RELEASE</spring.version>
@@ -300,7 +305,9 @@
                 <version>0.7.1</version>
                 <executions>
                     <execution>
-                        <goals><goal>compress</goal></goals>
+                        <goals>
+                            <goal>compress</goal>
+                        </goals>
                     </execution>
                 </executions>
                 <configuration>
