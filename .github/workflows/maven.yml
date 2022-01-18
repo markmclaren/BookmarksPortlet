@@ -21,10 +21,6 @@ jobs:
         with:
           distribution: adopt-hotspot
           java-version: 8
-      - name: PWD
-        run: pwd
-      - name: LS
-        run: ls -ltr
       - name: Show Maven version
         run: ./mvnw --version
       - name: Build and Test
