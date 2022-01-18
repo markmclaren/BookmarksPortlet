@@ -22,6 +22,6 @@ jobs:
           distribution: adopt-hotspot
           java-version: 8
       - name: Show Maven version
-        run: mvn --version
+        run: mvnw --version
       - name: Build and Test
-        run: mvn -B package
+        run: mvnw -B package
