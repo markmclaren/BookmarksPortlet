@@ -1,0 +1,25 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ cernunnos-changes ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: cernunnos-changes      
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: adopt-hotspot
+          java-version: 8
+      - name: Build and Test
+        run: mvn -B package
