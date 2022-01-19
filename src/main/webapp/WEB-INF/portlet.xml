@@ -32,7 +32,7 @@
         <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
         <init-param>
             <name>contextConfigLocation</name>
-            <value>/WEB-INF/context/portlet/bookmarksPortletContext.xml</value>
+            <value>classpath:/context/portlet/bookmarksPortletContext.xml</value>
         </init-param>
         <!-- TODO change 0 to -1 for production -->
         <expiration-cache>0</expiration-cache>
