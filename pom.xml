@@ -36,9 +36,16 @@
             <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
         </repository>
         <!-- required for javax.script:script-api:1.0 transient dep -->
+        <!--
         <repository>
             <id>servicemix</id>
             <url>https://svn.apache.org/repos/asf/servicemix/m2-repo/</url>
+            https://markmclaren.github.io/repository
+        </repository>
+        -->
+        <repository>
+            <id>markmclaren repository</id>
+            <url>https://markmclaren.github.io/repository/</url>            
         </repository>
     </repositories>
 
