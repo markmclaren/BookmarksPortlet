@@ -111,7 +111,7 @@ public class ViewBookmarksController extends AbstractController {
                refData.put(ViewConstants.COMMAND_AVAILABLE_COLLECTIONS, this.availableCollections);       
                refData.put(ViewConstants.COMMAND_EMPTY_COLLECTION, new CollectionFolder());       
                       
-                if (request.getRemoteUser() == null) {     
+                if (request.getRemoteUser() == null || "guest".equals(bookmarkSet.getOwner())) {     
                    refData.put("guestMode", true);     
                 } else {       
                    refData.put("guestMode", false);
