@@ -27,7 +27,7 @@
  |    <xbel version="1.0">
  |      <title>My Bookmarks</title>
  |      <info>
- |        <metadata owner="admin"/>
+ |        <metadata owner="admin" bookmarkSet="internetGiants" />
  |      </info>
  |      <folder folded="yes" id="n1168638030077">
  |        <title>Internet Giants</title>
@@ -56,6 +56,7 @@
                         
                             BookmarkSet bookmarks = new BookmarkSet();
                             bookmarks.setOwner(Attributes.NODE.valueOf('info/metadata/@owner'));
+                            bookmarks.setName(Attributes.NODE.valueOf('info/metadata/@bookmarkSet'));
                             ScriptAttributes.RESPONSE.setAttribute('parent', bookmarks);
                         </script>
                         <subtasks>
